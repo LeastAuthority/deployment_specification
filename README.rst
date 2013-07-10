@@ -19,8 +19,13 @@ The interface for this repository is:
 
 ``deployment_tool_or_script absolute_path_to_this_repository git_reference_to_a_commit``
 
-The deployment specification consists of a set of files, each file contains a json formatted
-reference to a git repository and a specific commit therein.  
+The deployment specification consists of a set of files, each file contains a comma-separated value
+formatted reference to a git repository and a specific commit therein. Here're some examples of
+valid values:
+
+``/home/zancas/some_repository.git,37cff49989c1bf2da39552004c42f34d9a7ab4ae  
+/home/zancas/some_other_repository.git,master
+/home/zancas/yetathird.git,1.0``
 
 The intent is that a deployment tool, perhaps invoked with a git "push-hook", reads those files and 
 executes some combination of copying the indicated data and/or using the indicated data to specify 
