@@ -42,9 +42,9 @@ AND
 (2) source_code: The repository containing the leastauthority.com code base.
 (3) secret_config: The secret_config repository which contains Least Authority AWS credentials.
 
-Within the repository referenced by "(1)", is the nonsecret_config file, a json encoded key-value map (dict) which 
-leastauthority.com/deploy_infrastructure_server.py parses in order to learn parameters necessary
-for the deployment.
+Within the repository referenced by "(1)", is the nonsecret_config file, a json encoded key-value 
+map (dict) which leastauthority.com/deploy_infrastructure_server.py parses in order to learn
+parameters necessary for the deployment.
 
 Within the repositories referenced by "(2)" and "(3)" are code bases that will be copied to the
 new EC2 once it is launched.
