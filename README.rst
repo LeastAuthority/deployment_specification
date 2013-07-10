@@ -19,13 +19,21 @@ The interface for this repository is:
 
 ``deployment_tool_or_script absolute_path_to_this_repository git_reference_to_a_commit``
 
+Here are some examples of uses that work with Least Authority's
+deploy_infrastructure_server.py tool, on Zancas's local system:
+
+``deploy_infrastructure_server.py ./deployment_specification master``
+
+``deploy_infrastructure_server.py /home/arc/LeastAuthority_env/LeastAuthority/website/leastauthority.com deployment_specification e55d2ceb03cae223013d1118f9d8b81c8843f587``
+
 The deployment specification consists of a set of files, each file contains a comma-separated value
 formatted reference to a git repository and a specific commit therein. Here're some examples of
 valid values:
 
 ``/home/zancas/some_repository.git,37cff49989c1bf2da39552004c42f34d9a7ab4ae  
 /home/zancas/some_other_repository.git,master
-/home/zancas/yetathird.git,1.0``
+/home/zancas/yetathird.git,1.0
+https://github.com/LeastAuthority/deployment_specification,SOME_BRANCH_OR_TAG``
 
 The intent is that a deployment tool, perhaps invoked with a git "push-hook", reads those files and 
 executes some combination of copying the indicated data and/or using the indicated data to specify 
